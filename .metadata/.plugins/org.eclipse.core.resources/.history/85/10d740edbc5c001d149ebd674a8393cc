@@ -1,0 +1,39 @@
+package com.stackroute;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.stackroute.controller.UsersController;
+
+
+import static org.junit.Assert.assertEquals;
+
+
+
+
+public class userControllerTest {
+	
+	UsersController contoller;
+	
+	@Before
+	public void  setUp() {
+		contoller=new UsersController();
+	}
+	@After
+	public void tearDown() {
+		
+		contoller=null;
+		
+	}
+	@Test
+	public void getAllusersTest() {
+//		var expected =List<Users>
+		var result=contoller.getAllusers().ok();
+		
+		assertEquals(result,contoller.getAllusers());
+		
+	}
+	
+
+}

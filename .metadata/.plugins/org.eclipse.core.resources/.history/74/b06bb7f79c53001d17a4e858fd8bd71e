@@ -1,0 +1,134 @@
+package com.stackroute.controller;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.stackroute.model.Users;
+import com.stackroute.service.UsersService;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+@RestController
+
+@CrossOrigin("*")
+public class UsersController {
+
+	
+	ResponseEntity<?> response;
+	@Autowired
+	UsersService service;
+	boolean flag;
+	
+	
+	
+	
+	
+	
+	
+
+	@PostMapping("/addUser")
+	public ResponseEntity<?> addUser(@RequestBody Users u) {
+		flag = service.addUsers(u) != null;
+		if(flag) {
+			response = new ResponseEntity<String>("User Added",HttpStatus.CREATED);
+		}
+		else {
+			response = new ResponseEntity<String>("Failure! Check the code",HttpStatus.BAD_REQUEST);
+		}
+		return response;
+	}
+	
+	
+	@GetMapping("/getAllusers")
+	public ResponseEntity<?> getAllusers(){
+		
+		List<Users> userList = service.getAllUsers();
+		if(userList!=null) {
+			response = new ResponseEntity<List<Users>>(userList,HttpStatus.OK);
+		}
+		else {
+			response = new ResponseEntity<String>("Failure! No Records",HttpStatus.BAD_REQUEST);
+		}
+
+		return response;
+	}
+	
+	
+	@GetMapping("/getUser/{id}")
+	public ResponseEntity<?> getUser(@PathVariable("id") int uId) {
+
+		Users u = null;
+		
+			u = service.getUser(uId);
+		
+		if(u!=null) {
+			response = new ResponseEntity<Users>(u,HttpStatus.OK);
+		}
+		else {
+			response = new ResponseEntity<String>("Failure! No Records",HttpStatus.BAD_REQUEST);
+		}
+
+		return response;
+		
+	}
+	
+
+	@PutMapping("/updateUser")
+	public ResponseEntity<?> updateUser(@RequestBody Users user,HttpSession session) {
+
+		if(user!=null) {
+			service.updateUser(user);
+			response = new ResponseEntity<String>("User has been updated",HttpStatus.OK);
+		}
+		else {
+			response = new ResponseEntity<String>("Failure! No Records",HttpStatus.BAD_REQUEST);
+		}
+
+		return response;
+		
+	}
+	
+	
+	@DeleteMapping("/DeleteTheUser/{id}")
+	public ResponseEntity<?> DeleteTheUser(@PathVariable("id") int uId,HttpSession session) {
+
+		Users u = null;
+		try {
+			u = service.getUser(uId);
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		if(u!=null) {
+			service.deleteUser(uId);
+			response = new ResponseEntity<String>("User has been Deleted",HttpStatus.OK);
+		}
+		else {
+			response = new ResponseEntity<String>("Failure! No Records",HttpStatus.BAD_REQUEST);
+		}
+
+		return response;
+		
+	}
+	
+	
+	
+
+	
+	
+}

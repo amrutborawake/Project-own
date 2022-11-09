@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UsersDaoTest" project="musemanager" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.stackroute.dao.UsersDaoTest" time="1.109" displayname="UsersDaoTest" uniqueid="[engine:junit-jupiter]/[class:com.stackroute.dao.UsersDaoTest]">
+    <testcase name="testFindByUserNameAndPassword" classname="com.stackroute.dao.UsersDaoTest" time="1.109" displayname="testFindByUserNameAndPassword()" uniqueid="[engine:junit-jupiter]/[class:com.stackroute.dao.UsersDaoTest]/[method:testFindByUserNameAndPassword()]"/>
+  </testsuite>
+</testrun>

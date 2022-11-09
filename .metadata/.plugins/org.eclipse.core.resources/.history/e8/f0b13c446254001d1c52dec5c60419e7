@@ -1,0 +1,21 @@
+package com.stackroute;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.stackroute.model.accountManager;
+
+@SpringBootApplication
+public class AccountmanagerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AccountmanagerApplication.class, args);
+		
+		accountManager m;
+		m.setManagerName("Amrut");
+		m.setPassword("amrut123");
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.stackroute;
+
+public class userControllerTest {
+	
+	@Before
+	public void  setUp() {
+		
+	}
+	@After
+	public void tearDown() {
+		service = null;
+	}
+	
+
+}

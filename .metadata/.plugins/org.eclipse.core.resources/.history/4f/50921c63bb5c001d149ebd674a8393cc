@@ -1,0 +1,25 @@
+package com.stackroute;
+
+import org.junit.After;
+import org.junit.Before;
+
+import com.stackroute.controller.UsersController;
+
+
+public class userControllerTest {
+	
+	UsersController contoller;
+	
+	@Before
+	public void  setUp() {
+		contoller=new UsersController()
+	}
+	@After
+	public void tearDown() {
+		
+		contoller=null;
+		
+	}
+	
+
+}

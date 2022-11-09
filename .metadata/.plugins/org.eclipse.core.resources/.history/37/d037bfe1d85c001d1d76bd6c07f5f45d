@@ -1,0 +1,57 @@
+package com.stackroute.service;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.stackroute.dao.UsersDao;
+import com.stackroute.model.Users;
+@SpringBootTest
+class UsersServiceTest {
+
+	@Autowired
+	UsersDao dao;
+	
+	@Test
+	void testAddUsers() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAllUsers() {
+		 
+		List<Users> user=dao.findAll();
+		assertThat(user.size()).isGreaterThan(0);
+
+	}
+
+	@Test
+	void testGetUser() {
+		Users user=dao.findById(32).get();
+		Assertions.assertThat(user.getUserId()).isEqualTo(32);
+		
+	}
+
+	@Test
+	void testUpdateUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDeleteUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testValidate() {
+		fail("Not yet implemented");
+	}
+
+}

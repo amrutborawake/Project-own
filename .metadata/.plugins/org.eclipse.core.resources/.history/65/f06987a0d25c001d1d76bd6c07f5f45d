@@ -1,0 +1,39 @@
+package com.stackroute.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class UsersServiceTest {
+
+	@Test
+	void testAddUsers() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAllUsers() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testUpdateUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDeleteUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testValidate() {
+		fail("Not yet implemented");
+	}
+
+}

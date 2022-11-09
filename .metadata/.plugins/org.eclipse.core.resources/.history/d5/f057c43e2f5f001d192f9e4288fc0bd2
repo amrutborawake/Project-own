@@ -1,0 +1,21 @@
+server.port=8081
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.database=jobsdb
+#spring.data.mongodb.port=27017
+#spring.data.mongodb.uri=mongodb://localhost:27017/jobsdb
+
+
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/jobsdb?verifyServerCertificate=false&useSSL=false&requireSSL=false
+spring.datasource.username=root
+spring.datasource.password=root123
+
+spring.jackson.serialization.fail-on-empty-beans=false
+
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+
+
+spring.jpa.hibernate.ddl-auto = create
+spring.jpa.show-sql=true

@@ -1,0 +1,95 @@
+package com.stackroute.model;
+
+import java.time.LocalDate;
+
+
+import javax.persistence.Id;
+
+
+
+
+
+public class Jobs {
+
+	@Id
+	private int id;
+	private String name;
+	private String type;
+	private LocalDate publication_date;
+	private String short_name;
+	private List<String> locations;
+	private String company;
+	private Users user;
+	public Jobs() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Jobs(int id, String name, String type, LocalDate publication_date, String short_name, String locations,
+			String company, Users user) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.type = type;
+		this.publication_date = publication_date;
+		this.short_name = short_name;
+		this.locations = locations;
+		this.company = company;
+		this.user = user;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public LocalDate getPublication_date() {
+		return publication_date;
+	}
+	public void setPublication_date(LocalDate publication_date) {
+		this.publication_date = publication_date;
+	}
+	public String getShort_name() {
+		return short_name;
+	}
+	public void setShort_name(String short_name) {
+		this.short_name = short_name;
+	}
+	public String getLocations() {
+		return locations;
+	}
+	public void setLocations(String locations) {
+		this.locations = locations;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public Users getUser() {
+		return user;
+	}
+	public void setUser(Users user) {
+		this.user = user;
+	}
+	@Override
+	public String toString() {
+		return "Jobs [id=" + id + ", name=" + name + ", type=" + type + ", publication_date=" + publication_date
+				+ ", short_name=" + short_name + ", locations=" + locations + ", company=" + company + ", user=" + user
+				+ "]";
+	}
+	
+	
+}

@@ -1,0 +1,18 @@
+package com.stackroute;
+
+import org.junit.Before;
+
+@Test
+public class userControllerTest {
+	
+	@Before
+	public void  setUp() {
+		
+	}
+	@After
+	public void tearDown() {
+		
+	}
+	
+
+}

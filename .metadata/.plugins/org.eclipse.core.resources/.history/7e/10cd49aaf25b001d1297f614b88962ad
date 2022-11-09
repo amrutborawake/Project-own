@@ -1,0 +1,34 @@
+package com.stackroute.model;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+
+
+
+
+
+
+@Entity
+public class Jobs {
+
+	@Id
+	private int id;
+	private String name;
+	private String type;
+	private LocalDate publication_date;
+	private String short_name;
+	private String username;
+	@ManyToOne
+	private Users user;
+	public Jobs() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

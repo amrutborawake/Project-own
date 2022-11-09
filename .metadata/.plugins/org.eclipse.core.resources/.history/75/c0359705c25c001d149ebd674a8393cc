@@ -1,0 +1,20 @@
+package com.stackroute.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.stackroute.model.Users;
+
+class UsersDaoTest {
+@Autowired 
+UsersDao dao;
+	@Test
+	void testFindByUserNameAndPassword() {
+		Users u=new Users(12,"ritk","ritik@gmail.com","root123", null);
+		
+		boolean actualResult=dao.findByUserNameAndPassword("amrut", "root123");
+	}
+
+}

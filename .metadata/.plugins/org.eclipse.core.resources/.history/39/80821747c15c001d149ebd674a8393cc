@@ -1,0 +1,16 @@
+package com.stackroute.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+class UsersDaoTest {
+@Autowired 
+UsersDao dao;
+	@Test
+	void testFindByUserNameAndPassword() {
+		fail("Not yet implemented");
+	}
+
+}

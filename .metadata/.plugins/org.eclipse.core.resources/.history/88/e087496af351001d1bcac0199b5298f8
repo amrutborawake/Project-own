@@ -1,0 +1,21 @@
+package com.stackroute.model;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Jobs {
+
+	@Id
+	private int id;
+	private String name;
+	private String type;
+	private LocalDate publication_date;
+	private String short_name;
+	private String locations;
+	private String company;
+	
+	
+	
+}

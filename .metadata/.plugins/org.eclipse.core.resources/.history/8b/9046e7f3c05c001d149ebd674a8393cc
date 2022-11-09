@@ -1,0 +1,14 @@
+package com.stackroute.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class UsersDaoTest {
+
+	@Test
+	void testFindByUserNameAndPassword() {
+		fail("Not yet implemented");
+	}
+
+}
