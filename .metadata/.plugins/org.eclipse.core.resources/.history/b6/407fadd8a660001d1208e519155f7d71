@@ -19,7 +19,7 @@ public class MusemanagerApplication {
 		SpringApplication.run(MusemanagerApplication.class, args);
 		
 	}
-	//b
+	//bean
 
 	    @Bean
 	    public FilterRegistrationBean<GenericFilterBean> jwtFilter(){
